@@ -1,0 +1,42 @@
+<h3>Update User</h3>
+<form [formGroup]="userForm">
+  <div [formGroup]="userForm">
+    <label> First Name</label>
+    <input type="text" class="form-control" formControlName="firstName" />
+  </div>
+
+  <div [formGroup]="userForm">
+    <label> Lastname</label>
+    <input class="form-control" formControlName="lastName" />
+  </div>
+
+  <div [formGroup]="userForm">
+    <label> Email</label>
+    <input
+      type="text"
+      class="form-control"
+      id="email"
+      formControlName="email"
+    />
+  </div>
+
+  <div [formGroup]="userForm">
+    <label> Password</label>
+    <input
+      type="text"
+      class="form-control"
+      id="password"
+      formControlName="password"
+    />
+  </div>
+
+  <div style="margin-bottom: 20px">
+    <label>Role </label>
+    <select class="form-control" formControlName="role">
+      <option hidden>Choose role</option>
+      <option *ngFor="let r of role" [value]="r">{{ r }}</option>
+    </select>
+  </div>
+
+  <button class="btn btn-success" (click)="updateUser()">Submit</button>
+</form>

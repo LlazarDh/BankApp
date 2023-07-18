@@ -1,0 +1,26 @@
+<h2>Card List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Card Id</th>
+      <th>Reason</th>
+      <th>Type</th>
+      <th>Status</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let card of cards">
+      <td>{{ card.cardId }}</td>
+      <td>{{ card.reason }}</td>
+      <td>{{ card.type }}</td>
+      <td>{{ card.status }}</td>
+      <td>{{ card.salary }}</td>
+
+      <!--    <td>-->
+      <!--      <button (click) = "updateUser(user.userId)" class="btn btn-info"> Update </button>-->
+      <!--      <button (click)="deleteUser(user.userId)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>-->
+      <!--    </td>-->
+    </tr>
+  </tbody>
+</table>

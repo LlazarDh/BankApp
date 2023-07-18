@@ -1,0 +1,34 @@
+<h3>Create Transaction</h3>
+<form [formGroup]="transactionForm">
+  <div class="form-group">
+    <label> Amount</label>
+    <input
+      type="text"
+      class="form-control"
+      id="amount"
+      formControlName="amount"
+    />
+  </div>
+
+  <div class="form-group">
+    <label> IBAN</label>
+    <input type="text" class="form-control" id="iban" formControlName="iban" />
+  </div>
+
+  <div style="margin-bottom: 20px">
+    <label>Currency </label>
+    <select class="form-control" formControlName="currency">
+      <option hidden>Choose currency</option>
+      <option *ngFor="let c of currency" [value]="c">{{ c }}</option>
+    </select>
+  </div>
+  <div style="margin-bottom: 20px">
+    <label>Type </label>
+    <select class="form-control" formControlName="type">
+      <option hidden>Choose type</option>
+      <option *ngFor="let t of type" [value]="t">{{ t }}</option>
+    </select>
+  </div>
+
+  <button class="btn btn-success" (click)="saveTransaction()">Submit</button>
+</form>

@@ -1,0 +1,26 @@
+<h2>Transaction List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Transaction Id</th>
+      <th>Amout</th>
+      <th>Currency</th>
+      <th>Type</th>
+      <th>IBAN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of transactions">
+      <td>{{ transaction.transactionId }}</td>
+      <td>{{ transaction.amount }}</td>
+      <td>{{ transaction.currency }}</td>
+      <td>{{ transaction.type }}</td>
+      <td>{{ transaction.iban }}</td>
+
+      <!--    <td>-->
+      <!--      <button (click) = "updateUser(user.userId)" class="btn btn-info"> Update </button>-->
+      <!--      <button (click)="deleteUser(user.userId)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>-->
+      <!--    </td>-->
+    </tr>
+  </tbody>
+</table>
